@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;}
+@keyframes blink{0%,49%{opacity:1;}50%,100%{opacity:0;}}
+a{color:inherit;text-decoration:none;}
+.pad{box-sizing:border-box;padding-left:48px;padding-right:48px;}
+.hero-pad{box-sizing:border-box;padding:64px 48px 48px;}
+.hero-line{font-size:26px;line-height:1.6;}
+.divider{font-size:13px;letter-spacing:.1em;white-space:nowrap;overflow:hidden;}
+.dl-row a:hover{text-shadow:0 0 8px currentColor;}
+@media (max-width:640px){
+  .pad{padding-left:20px;padding-right:20px;}
+  .hero-pad{padding:40px 20px 32px;}
+  .hero-line{font-size:19px;}
+  .divider{letter-spacing:0;}
+  .nav-links{font-size:13px;}
+  .nav-links a{display:inline-block;margin-bottom:4px;}
+}
+</style>
+</helmet>
+
+<section style="position:relative;width:100%;box-sizing:border-box;background:#0a0e0a;font-family:'JetBrains Mono',monospace;color:#39ff6e;padding-bottom:60px;">
+  <div style="position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(57,255,110,0.035) 0px,rgba(57,255,110,0.035) 1px,transparent 1px,transparent 3px);"></div>
+
+  <div class="pad" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;padding-top:24px;padding-bottom:24px;border-bottom:1px solid #1f7a3d;">
+    <div style="font-size:15px;letter-spacing:.05em;">TOMER SHAFIR :: SOFTWARE ENGINEER</div>
+    <div class="nav-links" style="font-size:14px;color:#1f7a3d;">
+      <a href="#about-a" style="color:#39ff6e;">about</a> | <a href="#skills-a" style="color:#39ff6e;">skills</a> | <a href="#exp-a" style="color:#39ff6e;">experience</a> | <a href="#proj-a" style="color:#39ff6e;">projects</a> | <a href="#more-a" style="color:#39ff6e;">more</a> | <a href="#contact-a" style="color:#39ff6e;">contact</a>
+    </div>
+  </div>
+
+  <div class="hero-pad">
+    <div class="hero-line">
+      <span>{{ typedLine1 }}</span><span style="display:inline-block;width:10px;background:#39ff6e;animation:blink 1s step-end infinite;">&nbsp;</span>
+    </div>
+    <div class="hero-line" style="color:#c9ffd6;">{{ typedLine2 }}</div>
+    <div style="font-size:15px;color:#1f7a3d;margin-top:14px;">Software engineer, backend-leaning. Ships things, breaks things, fixes things, writes it down.</div>
+    <div class="dl-row" style="font-size:14px;margin-top:22px;">
+      <a href="resume.pdf" download="Tomer_Shafir_Resume.pdf" style="color:#39ff6e;">$ curl -O resume.pdf</a>
+      <span style="color:#1f7a3d;">..........................</span>
+      <a href="resume.pdf" download="Tomer_Shafir_Resume.pdf" style="color:#ffb703;">[ &darr; download ]</a>
+    </div>
+  </div>
+
+  <div class="divider pad" style="color:#1f7a3d;">========================================================================</div>
+
+  <div id="about-a" class="pad" style="padding-top:48px;padding-bottom:48px;">
+    <div style="font-size:15px;color:#c9ffd6;margin-bottom:16px;">$ cat about.txt</div>
+    <div style="border:1px solid #1f7a3d;padding:24px;font-size:16px;line-height:1.7;color:#d6ffe0;max-width:820px;">
+      A backend-leaning software engineer building event-driven services (Python, FastAPI, PostgreSQL, NATS) and full-stack features at Abra, previously supporting infra and internal tooling at Fireblocks. Daily user of AI-assisted engineering workflows — Claude Code, MCP tools, spec-driven development — to ship complex features faster without losing rigor. Always curious about DevOps and distributed systems.
+    </div>
+  </div>
+
+  <div id="skills-a" class="pad" style="padding-bottom:48px;">
+    <div style="font-size:15px;color:#c9ffd6;margin-bottom:16px;">$ ls skills/</div>
+    <div style="display:flex;flex-direction:column;gap:14px;max-width:820px;">
+      <div>
+        <div style="color:#7dffaa;font-size:13px;margin-bottom:8px;">backend</div>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;">
+          <span style="border:1px solid #1f7a3d;padding:8px 14px;font-size:14px;">[Python / FastAPI]</span>
+          <span style="border:1px solid #1f7a3d;padding:8px 14px;font-size:14px;">[Node.js / NestJS]</span>
+          <span style="border:1px solid #1f7a3d;padding:8px 14px;font-size:14px;">[PostgreSQL]</span>
+          <span style="border:1px solid #1f7a3d;padding:8px 14px;font-size:14px;">[NATS]</span>
+        </div>
+      </div>
+      <div>
+        <div style="color:#7dffaa;font-size:13px;margin-bottom:8px;">frontend</div>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;">
+          <span style="border:1px solid #1f7a3d;padding:8px 14px;font-size:14px;">[React]</span>
+          <span style="border:1px solid #1f7a3d;padding:8px 14px;font-size:14px;">[TypeScript]</span>
+          <span style="border:1px solid #1f7a3d;padding:8px 14px;font-size:14px;">[RxJS]</span>
+          <span style="border:1px solid #1f7a3d;padding:8px 14px;font-size:14px;">[Module Federation]</span>
+        </div>
+      </div>
+      <div>
+        <div style="color:#7dffaa;font-size:13px;margin-bottom:8px;">infrastructure</div>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;">
+          <span style="border:1px solid #1f7a3d;padding:8px 14px;font-size:14px;">[Docker / Kubernetes]</span>
+          <span style="border:1px solid #1f7a3d;padding:8px 14px;font-size:14px;">[AWS]</span>
+          <span style="border:1px solid #1f7a3d;padding:8px 14px;font-size:14px;">[Ansible]</span>
+          <span style="border:1px solid #1f7a3d;padding:8px 14px;font-size:14px;">[CI/CD]</span>
+        </div>
+      </div>
+      <div>
+        <div style="color:#7dffaa;font-size:13px;margin-bottom:8px;">ai-assisted engineering</div>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;">
+          <span style="border:1px solid #1f7a3d;padding:8px 14px;font-size:14px;">[Claude Code]</span>
+          <span style="border:1px solid #1f7a3d;padding:8px 14px;font-size:14px;">[MCP]</span>
+          <span style="border:1px solid #1f7a3d;padding:8px 14px;font-size:14px;">[Agentic Workflows]</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="exp-a" class="pad" style="padding-bottom:48px;">
+    <div style="font-size:15px;color:#c9ffd6;margin-bottom:16px;">$ cat experience.log</div>
+    <div style="display:flex;flex-direction:column;gap:20px;max-width:820px;">
+      <div style="font-size:15px;line-height:1.7;">
+        <div style="color:#7dffaa;">// Jun 2024 — Present</div>
+        <div style="color:#d6ffe0;font-size:16px;">Software Engineer @ Abra</div>
+        <div style="color:#1f7a3d;">▸ Backend services in Python (FastAPI) with PostgreSQL, Alembic migrations &amp; NATS event-driven integration.</div>
+        <div style="color:#1f7a3d;">▸ Full-stack features across a NestJS backend and a React frontend (Module Federation, RxJS) rendering server-defined layouts.</div>
+        <div style="color:#1f7a3d;">▸ Own a C#/.NET 6 automation testing framework (Playwright, Docker, WebSocket, Page Object Model).</div>
+        <div style="color:#1f7a3d;">▸ Daily use of Claude Code (MCP tools &amp; custom skills); drive complex features via a spec → plan → implementation workflow.</div>
+        <div style="color:#1f7a3d;">▸ Completed "Claude Code Architect Foundations" — tool use, agentic frameworks &amp; AI-assisted engineering workflows.</div>
+      </div>
+      <div style="font-size:15px;line-height:1.7;">
+        <div style="color:#7dffaa;">// Jan 2022 — Jun 2024</div>
+        <div style="color:#d6ffe0;font-size:16px;">Technical Support Engineer @ Fireblocks</div>
+        <div style="color:#1f7a3d;">Full-stack engineer in the support org — built internal tools with React, Tailwind, Zustand, Zod, Prisma, tRPC &amp; TypeScript, troubleshot end-user issues, and monitored systems via Grafana, Elastic &amp; Coralogix.</div>
+      </div>
+      <div style="font-size:15px;line-height:1.7;">
+        <div style="color:#7dffaa;">// Sep 2017 — Dec 2020</div>
+        <div style="color:#d6ffe0;font-size:16px;">Research Assistant @ American Medical Laboratories</div>
+        <div style="color:#1f7a3d;">Built a C# application to generate COVID-19 PDF result reports from patient test data.</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="proj-a" class="pad" style="padding-bottom:48px;">
+    <div style="font-size:15px;color:#c9ffd6;margin-bottom:16px;">$ ls projects/</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;">
+      <div style="border:1px solid #1f7a3d;padding:20px;">
+        <div style="font-size:17px;color:#d6ffe0;" style-hover="text-shadow:2px 0 #ff2079,-2px 0 #00e5ff;">sport-court-rental/</div>
+        <div style="font-size:14px;color:#1f7a3d;margin:10px 0;">Dynamic sports court rental app with a user-friendly interface for reserving courts and real-time rental notifications.</div>
+        <div style="font-size:12px;color:#39ff6e;margin-bottom:10px;">Node · React Native · Redux · AWS S3 · MongoDB · Expo</div>
+        <a href="https://github.com/tomershafir" style="font-size:13px;color:#ffb703;">view →</a>
+      </div>
+      <div style="border:1px solid #1f7a3d;padding:20px;">
+        <div style="font-size:17px;color:#d6ffe0;" style-hover="text-shadow:2px 0 #ff2079,-2px 0 #00e5ff;">devops-bootcamp/</div>
+        <div style="font-size:14px;color:#1f7a3d;margin:10px 0;">Various production-grade CI/CD pipelines covering container orchestration, IaC and monitoring.</div>
+        <div style="font-size:12px;color:#39ff6e;margin-bottom:10px;">Linux · Docker · Kubernetes · AWS EKS · Terraform · Ansible · Python · Flask · Prometheus</div>
+        <a href="https://github.com/tomershafir" style="font-size:13px;color:#ffb703;">view →</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="more-a" class="pad" style="padding-bottom:48px;">
+    <div style="font-size:15px;color:#c9ffd6;margin-bottom:16px;">$ cat background.log --verbose</div>
+    <div style="border:1px solid #1f7a3d;padding:24px;font-size:14px;line-height:1.8;color:#d6ffe0;max-width:820px;display:flex;flex-direction:column;gap:18px;">
+      <div>
+        <div style="color:#7dffaa;margin-bottom:4px;">education</div>
+        <div>BSc Computer Science, Tel-Aviv Jaffa College <span style="color:#1f7a3d;">(Nov 2018 – Jan 2022, GPA 85)</span></div>
+        <div>"Hadash" High School <span style="color:#1f7a3d;">(2011 – 2014)</span></div>
+      </div>
+      <div>
+        <div style="color:#7dffaa;margin-bottom:4px;">military service</div>
+        <div>Artillery Corps, IDF <span style="color:#1f7a3d;">(Jul 2014 – Jul 2017)</span></div>
+      </div>
+      <div>
+        <div style="color:#7dffaa;margin-bottom:8px;">languages</div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;">
+          <span style="border:1px solid #1f7a3d;padding:6px 12px;font-size:13px;">[Hebrew — Native]</span>
+          <span style="border:1px solid #1f7a3d;padding:6px 12px;font-size:13px;">[English — Native]</span>
+        </div>
+      </div>
+      <div>
+        <div style="color:#7dffaa;margin-bottom:8px;">interests</div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;">
+          <span style="border:1px solid #1f7a3d;padding:6px 12px;font-size:13px;">[Self Development]</span>
+          <span style="border:1px solid #1f7a3d;padding:6px 12px;font-size:13px;">[DevOps]</span>
+          <span style="border:1px solid #1f7a3d;padding:6px 12px;font-size:13px;">[Tennis]</span>
+          <span style="border:1px solid #1f7a3d;padding:6px 12px;font-size:13px;">[Ping-pong]</span>
+          <span style="border:1px solid #1f7a3d;padding:6px 12px;font-size:13px;">[Soccer]</span>
+          <span style="border:1px solid #1f7a3d;padding:6px 12px;font-size:13px;">[Books]</span>
+          <span style="border:1px solid #1f7a3d;padding:6px 12px;font-size:13px;">[Gym]</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="contact-a" class="pad">
+    <div style="font-size:15px;color:#c9ffd6;margin-bottom:12px;">$ contact --info</div>
+    <div style="font-size:14px;line-height:1.8;color:#1f7a3d;">
+      <div>--email <a href="mailto:tomer1up@gmail.com" style="color:#ffb703;">tomer1up@gmail.com</a></div>
+      <div>--location Tel Aviv, IL</div>
+      <div>--github <a href="https://github.com/tomershafir" style="color:#ffb703;">github.com/tomershafir</a></div>
+      <div>--linkedin <a href="https://linkedin.com/in/tomershafir" style="color:#ffb703;">linkedin.com/in/tomershafir</a></div>
+    </div>
+  </div>
+</section>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { charCount: 0 };
+
+  componentDidMount() {
+    this._fullText = 'guest@tomer:~$ whoami\nTomer Shafir — Software Engineer';
+    this._typeInterval = setInterval(() => {
+      this.setState(s => {
+        if (s.charCount >= this._fullText.length) {
+          clearInterval(this._typeInterval);
+          return s;
+        }
+        return { charCount: s.charCount + 1 };
+      });
+    }, 40);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this._typeInterval);
+  }
+
+  renderVals() {
+    const typed = this._fullText ? this._fullText.slice(0, this.state.charCount) : '';
+    const lines = typed.split('\n');
+    return {
+      typedLine1: lines[0] || '',
+      typedLine2: lines[1] || ''
+    };
+  }
+}
+
+</script>
+</body>
+</html>
